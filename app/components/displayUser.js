@@ -8,12 +8,12 @@ const DisplayUser = () => {
   return (
 
     <div className="items-center justify-center mt-3 ml-96">
-      <h1>Users List</h1>
+      <h1 className='text-lg font-bold'>Users List</h1>
       <br />
       {
         userData.map((item) => (
           // eslint-disable-next-line react/jsx-key
-          <h2 className='bg-sky-300 w-[510px] p-1'>{item.name}</h2>
+          <h2 className='bg-sky-300 w-[510px] p-1 mt-3 '>{item.name}</h2>
         ))
       }
     </div>
