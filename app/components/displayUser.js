@@ -1,19 +1,33 @@
 "use client"
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { removeUser } from '../redux/slice'
 
 const DisplayUser = () => {
   const userData = useSelector((data) => data.users)
-  console.log(userData)
+  // console.log(userData)
+  const dispatch = useDispatch()
+
   return (
 
-    <div className="items-center justify-center mt-3 ml-96">
+    <div className="items-center justify-center mt-3 ml-96 ">
       <h1 className='text-lg font-bold'>Users List</h1>
       <br />
       {
         userData.map((item) => (
           // eslint-disable-next-line react/jsx-key
-          <h2 className='bg-sky-300 w-[510px] p-1 mt-3 '>{item.name}</h2>
+          
+          // eslint-disable-next-line react/jsx-key, react/jsx-no-comment-textnodes
+          <>
+          
+              
+            <div className='bg-sky-300 w-[490px] p-1 mt-3 ml-3 flex justify-between '>
+              <span>{item.name}</span>
+              <button onClick={()=> dispatch(removeUser(item.id))} className='bg-zinc-700 text-white font-bold w-20 rounded-sm'>Remove</button>
+            </div>
+            
+          </>
+          
         ))
       }
     </div>

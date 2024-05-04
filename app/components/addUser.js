@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { addUsers } from '../redux/slice'
 import { useDispatch } from 'react-redux'
+import Link from 'next/link'
 
 const AddUser = () => {
     const [user, setUser] = useState("")
@@ -25,9 +26,9 @@ const AddUser = () => {
 
 
                     <button onClick={userDispatch} className="bg-green-500 text-white font-bold p-3 ml-5 rounded-md">Add User</button>
-
+                    
+                <Link href="/userData" className="bg-green-400 text-black font-bold"> User data Page</Link>
                 </div>
-
             </div>
             <hr />
 
