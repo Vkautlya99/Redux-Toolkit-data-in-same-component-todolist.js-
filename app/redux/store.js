@@ -1,7 +1,11 @@
 const { configureStore } = require("@reduxjs/toolkit");
-import reducer from "./slice"
+import userReducers from "./slice"
+import todoReducers from "./todoSlice"
 export const Store = configureStore({
-    reducer
+    reducer: {
+        userdata: userReducers,
+        tododat : todoReducers
+    }
     
 })
 
