@@ -15,7 +15,7 @@ const AddUser = () => {
 
     return (
         <>
-            <div className="add-user border-double justify-center items-center text-center mt-2 mb-5 flex p-10 ">
+            <div className="add-user border-double justify-center items-center text-center mb-2 flex p-10 ">
 
                 <div className='border-50 h-36 w-[500px] box-border shadow-lg p-14'>
 
@@ -27,11 +27,13 @@ const AddUser = () => {
 
                     <button onClick={userDispatch} className="bg-green-500 text-white font-bold p-3 ml-5 rounded-md">Add User</button>
                     
-                    <Link href="/userData" className="bg-green-400 text-black font-bold"> User data Page</Link>
                     
-                    <Link className='bg-green-500 ml-6' href="/todolist">Todo page</Link>
                 </div>
             </div>
+                    <Link href="/userData" className="bg-green-400 ml-2 text-black font-bold rounded-sm p-2"> User data Page</Link>
+            <Link className='bg-green-400 ml-4 font-bold rounded-sm p-2' href="/todolist">Todo page</Link>
+            <br />
+            <br />
             <hr />
 
         </>
