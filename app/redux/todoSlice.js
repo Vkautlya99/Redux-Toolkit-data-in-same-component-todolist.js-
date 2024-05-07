@@ -1,5 +1,5 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit"
-import slice from "./slice"
+import Slice from "./slice"
 
 
 const initialState = {
@@ -10,7 +10,8 @@ const Slices = createSlice({
     name: "todos",
     initialState,
     reducers: {
-        addTodos: (state , action) => {
+        addTodos: (state, action) => {
+            console.log(action);
             const data = {
                 id: nanoid(),
                 name: action.payload
@@ -22,7 +23,7 @@ const Slices = createSlice({
 })
 
 export const { addTodos } = Slices.actions;
-export default slice.reducers;
+export default Slices.reducer;
 
 
 

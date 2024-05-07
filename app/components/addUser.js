@@ -27,7 +27,9 @@ const AddUser = () => {
 
                     <button onClick={userDispatch} className="bg-green-500 text-white font-bold p-3 ml-5 rounded-md">Add User</button>
                     
-                <Link href="/userData" className="bg-green-400 text-black font-bold"> User data Page</Link>
+                    <Link href="/userData" className="bg-green-400 text-black font-bold"> User data Page</Link>
+                    
+                    <Link className='bg-green-500 ml-6' href="/todolist">Todo page</Link>
                 </div>
             </div>
             <hr />

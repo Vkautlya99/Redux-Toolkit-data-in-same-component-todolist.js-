@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { removeUser } from '../redux/slice'
 
 const DisplayUser = () => {
-  const userData = useSelector((data) => data.userdata.users)
+  const userData = useSelector((data) => data.userData.users)
   console.log(userData)
   const dispatch = useDispatch()
 

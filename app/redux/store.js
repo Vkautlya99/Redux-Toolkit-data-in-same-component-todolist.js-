@@ -3,8 +3,8 @@ import userReducers from "./slice"
 import todoReducers from "./todoSlice"
 export const Store = configureStore({
     reducer: {
-        userdata: userReducers,
-        tododat : todoReducers
+        userData: userReducers,
+        todoData : todoReducers
     }
     
 })
